@@ -6,6 +6,8 @@
 // @version     1.0
 // @author      dangerousroomba
 // @description randomize the 'media pending approval' image on soyjak party
+// @downloadURL https://github.com/dangerousroomba/userscripts/raw/refs/heads/master/sharty/interesting_mpa/interesting_mpa.user.js
+// @updateURL https://github.com/dangerousroomba/userscripts/raw/refs/heads/master/sharty/interesting_mpa/interesting_mpa.user.js
 // ==/UserScript==
 
 // okay tough guy you want to be different alright
@@ -23,12 +25,12 @@ const possibleImages = [
   "https://soyjak.st/static/approval/pol.png", // classic images, (/pol/)
   "https://soyjak.st/static/approval/default.png", // classic images, (/soy/)
   // TODO: DON'T FUCKING FORGET, REMOVE THIS AND REPLACE IT WITH GITHUB LINKS YOU
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_145551.png", // nuimages, Pulled from SoyBooru
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_145552.png", // nuimages, Pulled from SoyBooru
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_153306.png", // nuimages, Pulled from SoyBooru
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_155096.png", // nuimages, Pulled from SoyBooru
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_162015.gif", // nuimages, Pulled from SoyBooru
-  "http://localhost:8000/interesting_mpa/assets/foruse/soybooru_post_91814_resized.png", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_145551.png", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_145552.png", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_153306.png", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_155096.png", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_162015.gif", // nuimages, Pulled from SoyBooru
+  "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_91814_resized.png", // nuimages, Pulled from SoyBooru
 ];
 
 let threadRegex = new RegExp("thread");
