@@ -31,6 +31,12 @@ const possibleImages = [
   "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_91814_resized.png", // nuimages, Pulled from SoyBooru
 ];
 
+// if you would like the image to update constantly, set this to true
+// Otherwise leave as is
+const CONSTANT_REFRESH = false;
+let modifiedPosts = [];
+let modifiedPostsSource = [];
+
 let threadRegex = new RegExp("thread");
 let isThread = threadRegex.test(window.location.href);
 
@@ -42,9 +48,33 @@ async function doStuff() {
   let elements = await fetchAllUnapproved();
 
   for (let i = 0; i < elements.length; i++) {
-    elements[i].src =
-      possibleImages[Math.floor(Math.random() * possibleImages.length)];
-    elements[i].width = 140; // sanity check
+    if (CONSTANT_REFRESH) {
+      elements[i].src =
+        possibleImages[Math.floor(Math.random() * possibleImages.length)];
+      elements[i].width = 140; // sanity check
+    } else {
+      let selected_image =
+        possibleImages[Math.floor(Math.random() * possibleImages.length)];
+      let reply_id = elements[i].parentElement.parentElement.parentElement.id;
+
+      if (isThread) {
+        if (modifiedPosts.includes(reply_id)) {
+          let index = modifiedPosts.indexOf(reply_id);
+          elements[i].src = modifiedPostsSource[index];
+          elements[i].width = 140; // sanity check
+          return;
+        }
+      }
+
+      elements[i].src = selected_image;
+      elements[i].width = 140; // sanity check
+      if (isThread) {
+        let the_fucking_reply_id =
+          elements[i].parentElement.parentElement.parentElement.id;
+        modifiedPosts.push(the_fucking_reply_id);
+        modifiedPostsSource.push(selected_image);
+      }
+    }
   }
 }
 
