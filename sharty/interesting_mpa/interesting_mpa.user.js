@@ -23,7 +23,6 @@ const possibleImages = [
   "https://soyjak.st/static/approval/classic.png", // classic images, (/qa/, etc)
   "https://soyjak.st/static/approval/pol.png", // classic images, (/pol/)
   "https://soyjak.st/static/approval/default.png", // classic images, (/soy/)
-  // TODO: DON'T FUCKING FORGET, REMOVE THIS AND REPLACE IT WITH GITHUB LINKS YOU
   "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_145551.png", // nuimages, Pulled from SoyBooru
   "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_145552.png", // nuimages, Pulled from SoyBooru
   "https://raw.githubusercontent.com/dangerousroomba/userscripts/refs/heads/master/sharty/interesting_mpa/assets/foruse/soybooru_post_153306.png", // nuimages, Pulled from SoyBooru
