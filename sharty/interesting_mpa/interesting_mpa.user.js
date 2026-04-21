@@ -56,14 +56,15 @@ let observerSettings = {
   subtree: false,
 };
 
-if (isThread) {
-  let postsDiv = document.querySelector(".thread");
-  if (postsDiv) {
-    // do you get the joke?
-    const nophono = new MutationObserver(doStuff);
-    nophono.observe(postsDiv, observerSettings);
-    console.log("Nophono is watching...");
+window.onload = function () {
+  doStuff();
+  if (isThread) {
+    let postsDiv = document.querySelector(".thread");
+    if (postsDiv) {
+      // do you get the joke?
+      const nophono = new MutationObserver(doStuff);
+      nophono.observe(postsDiv, observerSettings);
+      console.log("Nophono is watching...");
+    }
   }
-} else {
-  window.onload(doStuff());
-}
+};
