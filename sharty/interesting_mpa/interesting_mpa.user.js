@@ -35,8 +35,6 @@ const possibleImages = [
 let threadRegex = new RegExp("thread");
 let isThread = threadRegex.test(window.location.href);
 
-let modifiedPosts = [];
-
 async function fetchAllUnapproved() {
   return document.querySelectorAll(".unapproved");
 }
@@ -49,9 +47,6 @@ async function doStuff() {
       elements[i].src =
         possibleImages[Math.floor(Math.random() * possibleImages.length)];
       elements[i].width = 140; // sanity check
-      if (isThread) {
-        modifiedPosts.push(elements[i]);
-      }
     }
   }
 }
