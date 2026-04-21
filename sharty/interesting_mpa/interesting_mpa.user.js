@@ -42,11 +42,9 @@ async function doStuff() {
   let elements = await fetchAllUnapproved();
 
   for (let i = 0; i < elements.length; i++) {
-    if (!(elements[i] in modifiedPosts)) {
-      elements[i].src =
-        possibleImages[Math.floor(Math.random() * possibleImages.length)];
-      elements[i].width = 140; // sanity check
-    }
+    elements[i].src =
+      possibleImages[Math.floor(Math.random() * possibleImages.length)];
+    elements[i].width = 140; // sanity check
   }
 }
 
