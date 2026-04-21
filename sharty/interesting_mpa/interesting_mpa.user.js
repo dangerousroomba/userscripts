@@ -7,7 +7,6 @@
 // @author      dangerousroomba
 // @description randomize the 'media pending approval' image on soyjak party
 // @downloadURL https://github.com/dangerousroomba/userscripts/raw/refs/heads/master/sharty/interesting_mpa/interesting_mpa.user.js
-// @updateURL https://github.com/dangerousroomba/userscripts/raw/refs/heads/master/sharty/interesting_mpa/interesting_mpa.user.js
 // ==/UserScript==
 
 // okay tough guy you want to be different alright
